@@ -1,25 +1,26 @@
 package prova.demo.model;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import java.util.Date;
 
 public class DropboxFile {
 
-    public String tag;
-    public String name;
-    public String path_lower;
-    public String path_display;
-    public String id;
-    public String client_modified;  //OCCHIO CAMBIATO TIPO
-    public String server_modified;  //OCCHIO CAMBIATO TIPO
-    public String rev;
-    public Number size;             //OCCHIO CAMBIATO SEGNO
-    public String is_downloadable;  //OCCHIO CAMBIATO TIPO
-    public String content_hash;
+    private String tag;
+    private String name;
+    private String estensione;
+    private String path_lower;
+    private String path_display;
+    private String id;
+    private String client_modified;  //OCCHIO CAMBIATO TIPO
+    private String server_modified;  //OCCHIO CAMBIATO TIPO
+    private String rev;
+    private Number size;             //OCCHIO CAMBIATO SEGNO
+    private String is_downloadable;  //OCCHIO CAMBIATO TIPO
+    private String content_hash;
 
-    public DropboxFile(String tag, String name, String path_lower, String path_display, String id, String client_modified, String server_modified, String rev, Number size, String is_downloadable, String content_hash) {
+    public DropboxFile(String tag, String name,String estensione, String path_lower, String path_display, String id, String client_modified, String server_modified, String rev, Number size, String is_downloadable, String content_hash) {
         this.tag = tag;
         this.name = name;
+        this.estensione = estensione;
         this.path_lower = path_lower;
         this.path_display = path_display;
         this.id = id;
@@ -119,23 +120,21 @@ public class DropboxFile {
         this.content_hash = content_hash;
     }
 
+    public String getEstensione() {
+        return estensione;
+    }
+
+    public void setEstensione(String estensione) {
+        this.estensione = estensione;
+    }
+
     @Override
     public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("{tag=").append(tag);
-        sb.append(", name=").append(name);
-        sb.append(", path_lower=").append(path_lower);
-        sb.append(", path_display=").append(path_display);
-        sb.append(", id=").append(id);
-        sb.append(", client_modified=").append(client_modified);
-        sb.append(", server_modified=").append(server_modified);
-        sb.append(", rev=").append(rev);
-        sb.append(", size=").append(size);
-        sb.append(", is_downloadable=").append(is_downloadable);
-        sb.append(", content_hash=").append(content_hash);
-        sb.append('}');
-        return sb.toString();
+        return "{" + "tag=" + tag + ", name=" + name + ", estensione=" + estensione + ", path_lower=" + path_lower + ", path_display=" + path_display + ", id=" + id + ", client_modified=" + client_modified + ", server_modified=" + server_modified + ", rev=" + rev + ", size=" + size + ", is_downloadable=" + is_downloadable + ", content_hash=" + content_hash + '}';
     }
+    
+    
+    
 
     
 
