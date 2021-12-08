@@ -10,6 +10,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.Iterator;
@@ -102,34 +103,46 @@ public class DemoApplication {
                     String chiave = (String) iter2.next();
                     keys2.add(chiave);
                 }
-
+                
+                
+                
+                
                 String tag = (String) obj2.get(".tag");
                 String name = (String) obj2.get("name");
                 String path_lower = (String) obj2.get("path_lower");
                 String path_display = (String) obj2.get("path_display");
                 String id = (String) obj2.get("id");
-                Date client_modified = (Date) obj2.get("client_modified");
-                Date server_modified = (Date) obj2.get("server_modified");
+                String client_modified = (String) obj2.get("client_modified");
+                String server_modified = (String) obj2.get("server_modified");
                 String rev = (String) obj2.get("rev");
-                int size = (int) obj2.get("size");
-                boolean is_downloadable = (boolean) obj2.get("is_downloadable");
+                Number size = obj2.getAsNumber("size");
+                String is_downloadable = obj2.getAsString("is_downloadable");
                 String content_hash = (String) obj2.get("content_hash");
-
+                
+                
+                /*
+                System.out.println(tag);
+                System.out.println(name);
+                System.out.println(path_lower);
+                System.out.println(path_display);
+                System.out.println(id);
+                System.out.println(client_modified);
+                System.out.println(server_modified);
+                System.out.println(rev);
+                System.out.println(size);
+                System.out.println(is_downloadable);
+                System.out.println();
+                */
                 DropboxFile db = new DropboxFile(tag, name, path_lower, path_display, id, client_modified, server_modified, rev, size, is_downloadable, content_hash);
                 ListaFile.add(db);
             }
-
+            
             for (DropboxFile i : ListaFile) {
                 System.out.println(i.toString());
             }
-
-            /*
-            for (int i = 0; i < keys2.size(); i++) {
-                System.out.println(keys2.get(i));
-                System.out.println();
-                System.out.println();
-            }
-             */
+            
+            
+            
             System.out.println("OK");
         } catch (IOException | ParseException e) {
             e.printStackTrace();
