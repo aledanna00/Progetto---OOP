@@ -1,7 +1,9 @@
 package prova.demo.model;
 
+import prova.demo.service.GetDataFromDropbox;
+import prova.demo.service.DropboxFile;
 import java.util.ArrayList;
-import prova.demo.exception.*;
+import java.util.Date;
 
 /**
  *
@@ -9,50 +11,46 @@ import prova.demo.exception.*;
  */
 public class Filter_Ext_and_Date {
 
-    private String Estensione;
-    private String Data;
+    private String estensione;
+    private String data;
+    GetDataFromDropbox caricaDati = new GetDataFromDropbox();
+    ArrayList<DropboxFile> listaFile = caricaDati.getData();
+    ArrayList<DropboxFile> listaFileFiltrata = new ArrayList<>();
 
-    public Filter_Ext_and_Date(String Estensione, String Data) {
-        this.Estensione = Estensione;
-        this.Data = Data;
+    public Filter_Ext_and_Date(String estensione, String data) {
+        this.estensione = estensione;
+        this.data = data;
     }
 
-    public ArrayList FiltraLaLista() throws NoFileExc{
-        GetDataFromDropbox x = new GetDataFromDropbox();
-        ArrayList<DropboxFile> listaFile = x.getData();
-        ArrayList<DropboxFile> listaFileFiltrata = new ArrayList<>();
+    public ArrayList FiltraLaLista() {
 
         for (DropboxFile i : listaFile) {
-            if ((this.Estensione).equals(i.getEstensione())) {
+            if ((this.estensione).equals(i.getEstensione())) {
                 if (!(i.getTag().equals("folder"))) {
-                    String datalunga = i.getServer_modified();
-                    String datacorta = datalunga.substring(0, 10);
-                    if ((Data).equals(datacorta)) {
+                    if (data.equals(i.getServer_modified().substring(0, 10))) {
                         listaFileFiltrata.add(listaFile.get(listaFile.indexOf(i)));
                     }
                 }
             }
         }
-        if(listaFileFiltrata.isEmpty()) throw new NoFileExc();
-        else    return listaFileFiltrata;
-      
+
+        return listaFileFiltrata;
     }
 
     public String getEstensione() {
-        return Estensione;
+        return estensione;
     }
 
-    public void setEstensione(String Estensione) {
-        this.Estensione = Estensione;
+    public void setEstensione(String estensione) {
+        this.estensione = estensione;
     }
 
     public String getData() {
-        return Data;
+        return data;
     }
 
-    public void setData(String Data) {
-        this.Data = Data;
+    public void setData(String data) {
+        this.data = data;
     }
 
-    
 }

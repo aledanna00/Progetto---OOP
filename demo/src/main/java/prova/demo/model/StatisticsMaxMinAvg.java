@@ -1,24 +1,21 @@
 package prova.demo.model;
 
+import prova.demo.service.GetDataFromDropbox;
+import prova.demo.service.DropboxFile;
 import java.util.ArrayList;
-import prova.demo.exception.*;
-
-import prova.demo.exception.NoFileExc;
 
 public class StatisticsMaxMinAvg {
 
-    private String estensione;
-    GetDataFromDropbox x = new GetDataFromDropbox();
-    ArrayList<DropboxFile> listaFile = x.getData();
-
+    String estensione;
+    GetDataFromDropbox caricaDati = new GetDataFromDropbox();
+    ArrayList<DropboxFile> listaFile = caricaDati.getData();
+    
     public StatisticsMaxMinAvg(String estensione) {
         this.estensione = estensione;
     }
 
-    public int risultatoMinimo() throws NoFileExc{
+    public int risultatoMinimo() {
         int minimo = 0;
-      if(listaFile.isEmpty()) throw new NoFileExc();
-      else {
         for (DropboxFile i : listaFile) {
             if ((this.estensione).equals(i.getEstensione())) {
                 while (minimo == 0) {
@@ -30,42 +27,32 @@ public class StatisticsMaxMinAvg {
             }
         }
         return minimo;
-      }   
     }
 
-    public int risultatoMassimo() throws NoFileExc{
-        GetDataFromDropbox x = new GetDataFromDropbox();
-        ArrayList<DropboxFile> ListaFile = x.getData();
+    public int risultatoMassimo() {
         int massimo = 0;
-        if(ListaFile.isEmpty()) throw new NoFileExc();
-        else {
-        	 for (DropboxFile i : ListaFile) {
-                 if((this.estensione).equals(i.getEstensione())){
-                 if ((int) i.getSize() > massimo) {
-                     massimo = (int) i.getSize();
-                 }
-                 }
-             }
-             return massimo;
+        for (DropboxFile i : listaFile) {
+            if((this.estensione).equals(i.getEstensione())){
+            if ((int) i.getSize() > massimo) {
+                massimo = (int) i.getSize();
+            }
+            }
         }
+        return massimo;
     }
 
-    public double risultatoMedia() throws NoFileExc{
-        GetDataFromDropbox x = new GetDataFromDropbox();
-        ArrayList<DropboxFile> ListaFile = x.getData();
+    public double risultatoMedia() {
         int somma = 0;
         int contatore = 0;
-        if(ListaFile.isEmpty()) throw new NoFileExc();
-        else {
-        	
-        	 for(DropboxFile i : ListaFile){
-                 if((this.estensione).equals(i.getEstensione())){
-                     somma += (int) i.getSize();
-                     contatore++;
-                 }
-             }
-             return (somma/contatore);
+        for(DropboxFile i : listaFile){
+            if((this.estensione).equals(i.getEstensione())){
+                somma += (int) i.getSize();
+                contatore++;
+            }
         }
+        
+        
+        return (somma/contatore);
     }
 
     public String getEstensione() {

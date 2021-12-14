@@ -1,44 +1,42 @@
 package prova.demo.model;
 
+import prova.demo.service.GetDataFromDropbox;
+import prova.demo.service.DropboxFile;
 import java.util.ArrayList;
-import prova.demo.exception.*;
+import net.minidev.json.JSONArray;
 
 /**
  *
  * @author aless
  */
 public class Filter_Ext {
-    
-    private String Estensione;
-    
-    
-    public Filter_Ext(String Estensione) throws NoFileExc{
-        this.Estensione = Estensione;
+
+    private String estensione;
+    GetDataFromDropbox caricaDati = new GetDataFromDropbox();
+    ArrayList<DropboxFile> listaFile = caricaDati.getData();
+    ArrayList<DropboxFile> listaFileFiltrata = new ArrayList<>();
+
+    public Filter_Ext(String estensione) {
+        this.estensione = estensione;
     }
-    
-    public ArrayList FiltraLaLista() throws NoFileExc{
-        GetDataFromDropbox x = new GetDataFromDropbox();
-        ArrayList<DropboxFile> listaFile = x.getData();
-        ArrayList<DropboxFile> listaFileFiltrata = new ArrayList<>();
-        
-        for(DropboxFile i : listaFile){
-            if((this.Estensione).equals(i.getEstensione())){
+
+    public ArrayList FiltraLaLista() {
+
+        for (DropboxFile i : listaFile) {
+            if ((this.estensione).equals(i.getEstensione())) {
                 listaFileFiltrata.add(listaFile.get(listaFile.indexOf(i)));
             }
         }
-        if(listaFileFiltrata.isEmpty())throw new NoFileExc();
-        else  return listaFileFiltrata;
-       
+
+        return listaFileFiltrata;
     }
 
     public String getEstensione() {
-        return Estensione;
+        return estensione;
     }
 
-    public void setEstensione(String Estensione) {
-        this.Estensione = Estensione;
+    public void setEstensione(String estensione) {
+        this.estensione = estensione;
     }
-    
-    
-    
+
 }
