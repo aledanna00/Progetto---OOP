@@ -1,6 +1,7 @@
 package prova.demo.model;
 
 import java.util.ArrayList;
+import prova.demo.exception.*;
 
 /**
  *
@@ -16,24 +17,25 @@ public class Filter_Ext_and_Date {
         this.Data = Data;
     }
 
-    public ArrayList FiltraLaLista() {
+    public ArrayList FiltraLaLista() throws NoFileExc{
         GetDataFromDropbox x = new GetDataFromDropbox();
-        ArrayList<DropboxFile> ListaFile = x.getData();
-        ArrayList<DropboxFile> ListaFileFiltrata = new ArrayList<>();
+        ArrayList<DropboxFile> listaFile = x.getData();
+        ArrayList<DropboxFile> listaFileFiltrata = new ArrayList<>();
 
-        for (DropboxFile i : ListaFile) {
+        for (DropboxFile i : listaFile) {
             if ((this.Estensione).equals(i.getEstensione())) {
                 if (!(i.getTag().equals("folder"))) {
                     String datalunga = i.getServer_modified();
                     String datacorta = datalunga.substring(0, 10);
                     if ((Data).equals(datacorta)) {
-                        ListaFileFiltrata.add(ListaFile.get(ListaFile.indexOf(i)));
+                        listaFileFiltrata.add(listaFile.get(listaFile.indexOf(i)));
                     }
                 }
             }
         }
-
-        return ListaFileFiltrata;
+        if(listaFileFiltrata.isEmpty()) throw new NoFileExc();
+        else    return listaFileFiltrata;
+      
     }
 
     public String getEstensione() {
@@ -52,4 +54,5 @@ public class Filter_Ext_and_Date {
         this.Data = Data;
     }
 
+    
 }

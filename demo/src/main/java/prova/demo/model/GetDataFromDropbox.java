@@ -19,10 +19,10 @@ import net.minidev.json.parser.ParseException;
  * @author aless
  */
 public class GetDataFromDropbox {
-
+	
     public ArrayList getData() {
-        
-        ArrayList<DropboxFile> ListaFile = new ArrayList<>();
+    	
+    	ArrayList<DropboxFile> listaFile = new ArrayList<>();
         
         String url = "https://api.dropboxapi.com/2/files/list_folder";
         try {
@@ -94,7 +94,7 @@ public class GetDataFromDropbox {
                 String content_hash = (String) obj2.get("content_hash");
 
                 DropboxFile db = new DropboxFile(tag, name, estensione, path_lower, path_display, id, client_modified, server_modified, rev, size, is_downloadable, content_hash);
-                ListaFile.add(db);
+                listaFile.add(db);
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
@@ -102,7 +102,7 @@ public class GetDataFromDropbox {
             e.printStackTrace();
         }
         
-        return ListaFile;
+        return listaFile;
     }
 
     public void PrintData(ArrayList<DropboxFile> ListaFile) {

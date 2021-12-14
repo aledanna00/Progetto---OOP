@@ -10,11 +10,11 @@ public class DropboxFile {
     private String path_lower;
     private String path_display;
     private String id;
-    private String client_modified;  //OCCHIO CAMBIATO TIPO
-    private String server_modified;  //OCCHIO CAMBIATO TIPO
+    private String client_modified;  
+    private String server_modified; 
     private String rev;
-    private Number size;             //OCCHIO CAMBIATO SEGNO
-    private String is_downloadable;  //OCCHIO CAMBIATO TIPO
+    private Number size;             
+    private String is_downloadable;  
     private String content_hash;
 
     public DropboxFile(String tag, String name,String estensione, String path_lower, String path_display, String id, String client_modified, String server_modified, String rev, Number size, String is_downloadable, String content_hash) {
@@ -132,13 +132,5 @@ public class DropboxFile {
     public String toString() {
         return "{" + "tag=" + tag + ", name=" + name + ", estensione=" + estensione + ", path_lower=" + path_lower + ", path_display=" + path_display + ", id=" + id + ", client_modified=" + client_modified + ", server_modified=" + server_modified + ", rev=" + rev + ", size=" + size + ", is_downloadable=" + is_downloadable + ", content_hash=" + content_hash + '}';
     }
-    
-    
-    
-
-    
-
-    
-    
-
+ 
 }

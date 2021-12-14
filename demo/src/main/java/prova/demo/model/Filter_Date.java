@@ -2,6 +2,7 @@ package prova.demo.model;
 
 import java.util.ArrayList;
 
+
 /**
  *
  * @author aless
@@ -9,28 +10,28 @@ import java.util.ArrayList;
 public class Filter_Date {
 
     private String Data;
+    GetDataFromDropbox x = new GetDataFromDropbox();
+    ArrayList<DropboxFile> listaFile = x.getData();
+    ArrayList<DropboxFile> listaFileFiltrata = new ArrayList<>();
+
 
     public Filter_Date(String Data) {
         this.Data = Data;
     }
 
-    public ArrayList FiltraLaLista() {
-        GetDataFromDropbox x = new GetDataFromDropbox();
-        ArrayList<DropboxFile> ListaFile = x.getData();
-        ArrayList<DropboxFile> ListaFileFiltrata = new ArrayList<>();
-
-        for (DropboxFile i : ListaFile) {
+    public ArrayList FiltraLaLista(){
+        for (DropboxFile i : listaFile) {
 
             if (!(i.getTag().equals("folder"))) {
                 String datalunga = i.getServer_modified();
                 String datacorta = datalunga.substring(0, 10);
                 if ((Data).equals(datacorta)) {
-                    ListaFileFiltrata.add(ListaFile.get(ListaFile.indexOf(i)));
+                	int n = listaFile.indexOf(i);
+                    listaFileFiltrata.add(listaFile.get(n));
                 }
             }
         }
-
-        return ListaFileFiltrata;
+        	 return listaFileFiltrata;
     }
 
     public String getData() {
