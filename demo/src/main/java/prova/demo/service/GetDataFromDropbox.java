@@ -24,10 +24,11 @@ import net.minidev.json.parser.ParseException;
  */
 public class GetDataFromDropbox {
 
-    public ArrayList getData() {
-        
-        ArrayList<DropboxFile> listaFile = new ArrayList<>();
-        
+    ArrayList<DropboxFile> listaFile = new ArrayList<>();
+    ArrayList<DropboxFolder> listaCartelle = new ArrayList<>();
+
+    public void getData() {
+
         String url = "https://api.dropboxapi.com/2/files/list_folder";
         try {
             //APRE LA CONNESSIONE CON L'URL DI DROPBOX SELEZIONATO
@@ -81,30 +82,44 @@ public class GetDataFromDropbox {
 
                 String tag = (String) obj2.get(".tag");
                 String name = (String) obj2.get("name");
-                String estensione;
-                if (!(tag.equals("folder"))) {
-                    estensione = name.substring(name.indexOf(".", 0));
-                } else {
-                    estensione = "null";
-                }
                 String path_lower = obj2.getAsString("path_lower");
                 String path_display = obj2.getAsString("path_display");
                 String id = obj2.getAsString("id");
-                String client_modified = obj2.getAsString("client_modified");
-                String server_modified = obj2.getAsString("server_modified");
-                String rev = obj2.getAsString("rev");
-                Number size = obj2.getAsNumber("size");
-                String is_downloadable = obj2.getAsString("is_downloadable");
-                String content_hash = obj2.getAsString("content_hash");
 
-                DropboxFile db = new DropboxFile(tag, name, estensione, path_lower, path_display, id, client_modified, server_modified, rev, size, is_downloadable, content_hash);
-                listaFile.add(db);
+                if (!tag.equals("folder")) {
+
+                    String client_modified = obj2.getAsString("client_modified");
+                    String server_modified = obj2.getAsString("server_modified");
+                    String rev = obj2.getAsString("rev");
+                    Number size = obj2.getAsNumber("size");
+                    String is_downloadable = obj2.getAsString("is_downloadable");
+                    String content_hash = obj2.getAsString("content_hash");
+                    String estensione = name.substring(name.indexOf(".", 0));
+
+                    DropboxFile dropboxFile = new DropboxFile(tag, name, estensione, path_lower, path_display, id, client_modified, server_modified, rev, size, is_downloadable, content_hash);
+                    listaFile.add(dropboxFile);
+                } else {
+                    DropboxFolder dropboxFolder = new DropboxFolder(tag, name, path_lower, path_display, id);
+                    listaCartelle.add(dropboxFolder);
+                }
+
             }
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
         }
+        
+    }
+    
+    public ArrayList<DropboxFile> getListaFile(){
+        getData();
         return listaFile;
     }
+    
+    public ArrayList<DropboxFolder> getListaCartelle(){
+        getData();
+        return listaCartelle;
+    }
+
 }

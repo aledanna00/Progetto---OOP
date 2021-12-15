@@ -13,7 +13,7 @@ public class StatisticsCreationDate {
     String mesePiuCreazione;
     int contatoreMax;
     GetDataFromDropbox caricaDati = new GetDataFromDropbox();
-    ArrayList<DropboxFile> listaFile = caricaDati.getData();
+    ArrayList<DropboxFile> listaFile = caricaDati.getListaFile();
     ArrayList<String> listaMesi = new ArrayList<>();
 
     public String StatisticaDataCreazione() {
@@ -21,9 +21,7 @@ public class StatisticsCreationDate {
         
 
         for (DropboxFile i : listaFile) {
-            if (!(i.getTag().equals("folder"))) {
                 listaMesi.add(i.getClient_modified().substring(5, 7));
-            }
         }
 
         for (int i = 0; i < listaMesi.size(); i++) {

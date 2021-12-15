@@ -1,6 +1,3 @@
-prova\demo\model\Filter_Ext_and_Date.class
-prova\demo\model\Filter_Date.class
-prova\demo\model\StatisticsMaxMinAvg.class
-prova\demo\model\DropboxFile.class
-prova\demo\model\GetDataFromDropbox.class
-prova\demo\model\Filter_Ext.class
+prova\demo\service\DropboxFolder.class
+prova\demo\model\Filters.class
+prova\demo\service\DropboxElement.class
