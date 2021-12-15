@@ -108,8 +108,7 @@ public class GetDataFromDropbox {
             e.printStackTrace();
         } catch (Exception e) {
             e.printStackTrace();
-        }
-        
+        } 
     }
     
     public ArrayList<DropboxFile> getListaFile(){
