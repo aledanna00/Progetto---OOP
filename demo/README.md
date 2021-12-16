@@ -28,3 +28,9 @@ GET | /filter/extention | Restituisce una lista composta dai file, la cui estens
 GET | /filter/date | Restituisce una lista composta dai file, la cui data equivale a quella inserita dall'utente (esempio 2021-12-08)
 GET | /filter/ext_and_date | Restituisce una lista composta dai file, la cui estensione e data equivale a quella inserita dall'utente (esempio .docx e 2021-12-08)
 
+### Parametri
+In ogni rotta viene richiesto l'inserimento di uno o più parametri.
+I parametri sono di tipo **Estensione** e **Data**. E' importante ricordare che questi parametri, qualora non venissero inseriti, non venissero inseriti **NON** assumeranno alcun tipo di valore e quindi i valori restituiti saranno sicuramente pari a 0 (per le rotte /stats/...) e un JsonArray vuoto (per le rotte /filter/...).
+E' importante inoltre ricordare che il formato dell'estensione e della data devono essere rispettati:
+* Per l'estensione si deve inserire un punto (**.**) seguito dall'estensione desiderata (**txt || docx || jpg**)
+* Pe
