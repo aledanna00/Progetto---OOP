@@ -13,7 +13,7 @@ Avendo utilizzato il framework di [SpringBoot](https://spring.io/) è possibile 
 
 L'utente, per accedere a tutte le funzionalità dell'applicazione ha a disposizione due modi:
 * Utilizzando un Client, come [Postman](https://www.postman.com/), che sfrutta il Web Service [Tomcat](http://tomcat.apache.org/), il quale è già integrato nel Framework di SpringBoot.
-*
+* ![parametri](https://www.dropbox.com/home?preview=promuoviamo-paesaggio-italiano.jpg)
 
 
 ### ENG
