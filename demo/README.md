@@ -30,8 +30,8 @@ GET | /filter/ext_and_date | Restituisce una lista composta dai file, la cui est
 
 ### Parametri
 In ogni rotta viene richiesto l'inserimento di uno o più parametri.  
-I parametri sono di tipo **Estensione** e **Data**. E' importante ricordare che questi parametri, qualora non venissero inseriti, non venissero inseriti **NON** assumeranno alcun tipo di valore e quindi i valori restituiti saranno sicuramente pari a 0 (per le rotte /stats/...) e un JsonArray vuoto (per le rotte /filter/...).  
-E' fondamentale, per il corretto funzionamento, che il formato dell'estensione e della data devono essere rispettati:
+I parametri sono di tipo **Estensione** e **Data**. E' importante ricordare che questi parametri, qualora non venissero inseriti, **NON** assumeranno alcun tipo di valore e quindi i valori restituiti saranno sicuramente pari a 0 (per le rotte /stats/...) e un JsonArray vuoto (per le rotte /filter/...).  
+E' fondamentale, per il corretto funzionamento, che il formato dell'estensione e della data debbano essere rispettati:
 * Per l'estensione si deve inserire un punto (**.**) seguito dall'estensione desiderata (**txt || docx || jpg**)
 * Per la data si devono inserire in ordine **Anno, Mese e Giorno** separati da un **-** (**YYYY-MM-DD**)
 
