@@ -19,16 +19,17 @@ L'utente, per accedere a tutte le funzionalità dell'applicazione ha a disposizi
 ### ENG
 The SpingBoot app has the goal of analyzing and monitoring files and folders included in a Dropbox archive. The archive data are obtained through the use of a [Dropbox](https://www.dropbox.com/developers/documentation/http/documentation) REST API.
 
-The project is a Web Service that allows the interaction between a client and Dropbox to achieve:
+The project is a Web Service that allows the interaction between a Client and Dropbox to achieve:
 
 ✅ Maximum, minimum and average size of the files based off of their extension (for example .docx)  
 ✅ Time periods statistics
+
 ✅ Extension and creation date filters
 
 Having used [SpringBoot](https://spring.io/) framework we can launch the program from a normal developer suite
 
 The User, in order to access all the features of the app has at its disposal two options:
-*  Use a Client, like [Postman](https://www.postman.com/), that exploits the Web Service [Tomcat](http://tomcat.apache.org/), which is already incorporated in the Spring Boot Framework.
+*  To use a Client, like [Postman](https://www.postman.com/), that exploits the Web Service [Tomcat](http://tomcat.apache.org/), which is already incorporated in the Spring Boot Framework.
 
 ## **Rotte Applicazione**
 TIPO | ROTTA | DESCRIZIONE
