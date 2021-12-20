@@ -63,6 +63,42 @@ E' fondamentale, per il corretto funzionamento, che il formato dell'estensione e
 * Per l'estensione si deve inserire un punto (**.**) seguito dall'estensione desiderata (**txt || docx || jpg**)
 * Per la data si devono inserire in ordine **Anno, Mese e Giorno** separati da un **-** (**YYYY-MM-DD**)
 
+
+## GET /filter/...
+### Modello
+```json
+{
+    "tag": "file",
+    "name": "Document.docx",
+    "path_lower": "/document.docx",
+    "path_display": "/Document.docx",
+    "id": "id:WOl-BtauXDQAAAAAAAAACQ",
+    "estensione": ".docx",
+    "client_modified": "2021-12-06T10:06:06Z",
+    "server_modified": "2021-12-06T10:06:06Z",
+    "rev": "5d27767b65c6b89089b41",
+    "size": 11070,
+    "is_downloadable": "true",
+    "content_hash": "ac950068f9e21f84db628d28208d4ba20ad5b482ac384b68343c9b34243053a2"
+}
+```
+ Il JSON sopra riportato indica la rappresentazione utilizzata per indicare un **dominio**. 
+ I campi rappresentano:
+ 1) **tag** = Indica il tipo di elemento (File o Cartella).
+ 2) **name** = Nome del file.
+ 3) **path_lower** = Percorso in cui si trova il file o la cartella scritto tutto in minuscolo.
+ 4) **path_display** = Percorso in cui si trova il file o la cartella rispettando le maiuscole.
+ 5) **id** = Codice univoco per identificare l'elemento.
+ 6) **estensione** = Indica l'estensione del file (**.docx**).
+ 7) **client_modified** = Indica la data dell'ultima modifica dell'utente.
+ 8) **server_modified** = Indica la data di crezione.
+ 9) **rev** = Identificatore univoco utile per rilevare modifiche recenti e conflitti.
+ 10) **size** = Indica la dimensione del file (**espressa in kb**).
+ 11) **is_downloadable** = Indica se il file è scaricabile oppure no.
+ 12) **conten_hash** = Codice alfanumerico utile per verificare l'integrità di un file.
+
+
+ 
 ## **Eccezioni** 
 Il programma è in grando di lanciare eccezioni sia standard che personalizzate
 
