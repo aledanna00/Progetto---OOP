@@ -44,7 +44,22 @@ Having used [SpringBoot](https://spring.io/) framework we can launch the program
 
 The User, in order to access all the features of the app, has at its disposal two options:
 *  To use a Client, like [Postman](https://www.postman.com/), that exploits the Web Service [Tomcat](http://tomcat.apache.org/), which is already incorporated in the Spring Boot Framework.
-*  
+*  Use the Php project, developed as an add-on to allow anyone who is not familiar with  Postman to access all features . In order to use it the download and the installation of XAMPP is mandatory. After doing so you need to import the project in any developer suite, and open the XAMPP that will appear like this :
+   ![HomePageXAMPP](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/XAMPP%20control%20panel.PNG) 
+   
+  At this point you have to click on the first  **START** button  from the top, the one that refers to Apache . The obtained result will be :
+  
+   ![ApacheStart](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/ApacheStart.PNG)
+   
+  Once completed all this steps , we are now ready to run  the projects.
+  Obviously before running the PHP it’s essential to wait for Springboot to tell us which port is listening (**default :8080** ).
+  The PHP will look like this:
+
+
+    ![IndexDropboxPHP](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/IndexDropboxPHP.PNG) 
+    
+  Browsing through the buttons we can easily access all the features . Although the process may appear confusing , at this point the user is facilitated in the searching of files and statistics that satisfy his requests 
+   
 
 ## **Rotte Applicazione**
 TIPO | ROTTA | DESCRIZIONE
