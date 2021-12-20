@@ -145,3 +145,9 @@ Il programma è in grando di lanciare eccezioni sia standard che personalizzate
      ERRORE: NESSUN FILE PRESENTE
      ```
 
+# Autori
+
+Nome | LinkedIn | Contributo
+---- | ---- | ----
+[Alessio Cruciani](https://github.com/AlessioCruciani) | [Link](https://www.linkedin.com/in/alessio-cruciani-54b028222/) | 50%
+[Alessandra D'Anna](https://github.com/aledanna00) | [Link]() | 50%
