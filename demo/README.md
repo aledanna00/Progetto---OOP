@@ -22,7 +22,12 @@ L'utente, per accedere a tutte le funzionalità dell'applicazione ha a disposizi
   Arrivati a questo punto, si deve cliccare il primo bottone **START** a partire dall'alto, cioè quello che fa riferimento ad Apache.  
   Il risultato che otterremo sarà questo:  
   
-  ![]()
+  ![ApacheStart](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/ApacheStart.PNG)  
+  
+  Una volta completati tutti questi passaggi, siamo pronti per eseguire i progetti. Ovviamente prima di mandare in esecuzione il PHP è indispensabile attendere che Springboot ci  dica su quale porta è in ascolto (**default: 8080**).  
+  Ora si è pronti per eseguire il PHP che si presenta così:  
+  
+  
 
 ### ENG
 The SpingBoot app has the goal of analyzing and monitoring files and folders included in a Dropbox archive. The archive data are obtained through the use of a [Dropbox](https://www.dropbox.com/developers/documentation/http/documentation) REST API.
