@@ -160,6 +160,11 @@ Il programma è in grando di lanciare eccezioni sia standard che personalizzate
      ```
      ERRORE: NESSUN FILE PRESENTE
      ```
+## UML
+
+Il diagramma che esplica in maniera generale le suddivisoni del progetto è il seguente:  
+![Untitled](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/Untitled.png)
+
 
 # Autori
 
