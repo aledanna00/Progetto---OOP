@@ -78,6 +78,19 @@ Nel JSON sopra riportato, al posto di `number` comparirà il numero corrisponden
 
 Per le statistiche **/stats/minimo**, **/stats/massimo** e **/stats/media** la chiamata su Postman produce risultati del modello riportato sopra, rispettando i parametri inseriti dall'utente.
 
+## GET /stats/creation   GET /stats/modified
+### Modello
+```json
+  Il mese in cui sono stati creati il numero maggiore di file è: month Nel quale sono stati creati number file
+```
+Nel JSON sopra riportato, al posto di `month` comparirà il nome del mese corrispondente a quello in cui sono state effettuate più modifiche o creazioni, mentre al posto di `number` comparirà il numero dei file che sono stati creati o modificati in quel mese.
+
+### Risultato di chiamata su Postman di /stats/creation
+
+![StatsCreation](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/StatsCreatio.PNG)
+
+Per le statistiche **/stats/creation** e **/stats/modified** la chiamata su Postman produce risultati del modello riportato sopra, rispettando i parametri inseriti dall'utente.
+
 ## GET /filter/...
 ### Modello
 ```json
