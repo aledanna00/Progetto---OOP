@@ -47,7 +47,8 @@ The User, in order to access all the features of the app, has at its disposal tw
 *  Use the Php project, developed as an add-on to allow anyone who is not familiar with  Postman to access all features . In order to use it the download and the installation of XAMPP is mandatory. After doing so you need to import the project in any developer suite, and open the XAMPP that will appear like this :
    ![HomePageXAMPP](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/XAMPP%20control%20panel.PNG) 
    
-  At this point you have to click on the first  **START** button  from the top, the one that refers to Apache . The obtained result will be :
+  At this point you have to click on the first  **START** button  from the top, the one that refers to Apache . The obtained result will be :  
+  
   
    ![ApacheStart](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/ApacheStart.PNG)
    
