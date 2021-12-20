@@ -165,6 +165,21 @@ Il programma è in grando di lanciare eccezioni sia standard che personalizzate
 Il diagramma che esplica in maniera generale le suddivisoni del progetto è il seguente:  
 ![Untitled](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/Untitled.png)
 
+Andando a visionare i package più nel dettaglio troviamo 
+### Controller
+![Controller](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/Controller.png)
+
+### Service
+![Service](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/Service.png)
+
+### Model
+![Model](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/Model.png)
+
+### Exception
+![Exceprion](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/Exception.png)
+
+## Demo
+![demo](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/demo.png)
 
 # Autori
 
