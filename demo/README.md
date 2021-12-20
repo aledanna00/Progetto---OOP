@@ -72,9 +72,9 @@ E' fondamentale, per il corretto funzionamento, che il formato dell'estensione e
 ```
 Nel JSON sopra riportato, al posto di `number` comparirà il numero corrispondente al tipo di statistica scelto tra *minimo, massimo e media* corrispondente all'estensione inserita dall'utente.
 
-### Risultato di chiamata su Postman di /stats/minimo
+### Risultato di chiamata su Postman di /stats/massimo
 
-
+![StatsMassimo](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/StatsMassimo.PNG)
 
 Per le statistiche **/stats/minimo**, **/stats/massimo** e **/stats/media** la chiamata su Postman produce risultati del modello riportato sopra, rispettando i parametri inseriti dall'utente.
 
