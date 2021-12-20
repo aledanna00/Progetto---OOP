@@ -87,7 +87,7 @@ Nel JSON sopra riportato, al posto di `month` comparirà il nome del mese corris
 
 ### Risultato di chiamata su Postman di /stats/creation
 
-![StatsCreation](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/StatsCreatio.PNG)
+![StatsCreation](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/StatsCreation.PNG)
 
 Per le statistiche **/stats/creation** e **/stats/modified** la chiamata su Postman produce risultati del modello riportato sopra, rispettando i parametri inseriti dall'utente.
 
