@@ -65,6 +65,18 @@ E' fondamentale, per il corretto funzionamento, che il formato dell'estensione e
 * Per l'estensione si deve inserire un punto (**.**) seguito dall'estensione desiderata (**txt || docx || jpg**)
 * Per la data si devono inserire in ordine **Anno, Mese e Giorno** separati da un **-** (**YYYY-MM-DD**)
 
+## GET /stats/minimo   GET /stats/massimo   GET /stats/media
+### Modello
+```json
+  number
+```
+Nel JSON sopra riportato, al posto di `number` comparirà il numero corrispondente al tipo di statistica scelto tra *minimo, massimo e media* corrispondente all'estensione inserita dall'utente.
+
+### Risultato di chiamata su Postman di /stats/minimo
+
+
+
+Per le statistiche **/stats/minimo**, **/stats/massimo** e **/stats/media** la chiamata su Postman produce risultati del modello riportato sopra, rispettando i parametri inseriti dall'utente.
 
 ## GET /filter/...
 ### Modello
