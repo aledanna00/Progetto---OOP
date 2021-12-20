@@ -4,10 +4,9 @@ import java.util.ArrayList;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
-import prova.demo.exception.NoExtExc;
-import prova.demo.exception.NoFileExc;
-import prova.demo.model.*;
+import prova.demo.model.Filters;
+import prova.demo.model.StatisticsTimePeriod;
+import prova.demo.model.StatisticsMaxMinAvg;
 
 /**
  * Classe Controller che gestisce le chiamate al server
@@ -29,10 +28,10 @@ public class simpleRestController {
      */
     StatisticsMaxMinAvg stats = new StatisticsMaxMinAvg();
     /**
-     * Creazione di un Oggetto di tipo StatisticsCreationDate
-     * @see StatisticsCreationDate
+     * Creazione di un Oggetto di tipo StatisticsTimePeriod
+     * @see StatisticsTimePeriod
      */
-    StatisticsCreationDate statsCreazione = new StatisticsCreationDate();
+    StatisticsTimePeriod statsCreazione = new StatisticsTimePeriod();
     
     /**
      * Rotta che permette di visualizzare la dimensione minima di file filtrati 
@@ -40,10 +39,9 @@ public class simpleRestController {
      * 
      * @param estensione Indica l'estensione del file contenuto nel dropbox
      * @return Indica la dimensione Minima dei file, cercati per tipo di file
-     * @throws NoFileExc 
      */
     @GetMapping("/stats/minimo")
-    public int metodoMinimo(@RequestParam(name="Estensione") String estensione) throws NoFileExc{
+    public int metodoMinimo(@RequestParam(name="Estensione") String estensione){
         return stats.risultatoMinimo(estensione);
     }
     
@@ -53,10 +51,9 @@ public class simpleRestController {
      * 
      * @param estensione Indica l'estensione del file contenuto nel dropbox
      * @return Indica la dimensione Massima dei file, cercati per tipo di file
-     * @throws NoFileExc 
      */
     @GetMapping("/stats/massimo")
-    public int metodoMassimo(@RequestParam(name="Estensione") String estensione) throws NoFileExc{
+    public int metodoMassimo(@RequestParam(name="Estensione") String estensione){
         return stats.risultatoMassimo(estensione);
     }
     
@@ -66,10 +63,9 @@ public class simpleRestController {
      * 
      * @param estensione Indica l'estensione del file contenuto nel dropbox
      * @return Indica la dimensione Media dei file, cercati per tipo di file
-     * @throws NoFileExc 
      */
     @GetMapping("/stats/media")
-    public double metodoMedia(@RequestParam(name="Estensione") String estensione) throws NoFileExc{
+    public double metodoMedia(@RequestParam(name="Estensione") String estensione){
         return stats.risultatoMedia(estensione);
     }
     
@@ -79,10 +75,9 @@ public class simpleRestController {
      * 
      * @param estensione Indica l'estensione inserita dall'utente nella ricerca
      * @return Lista di Oggetti di DropboxFile filtrati per estensione
-     * @throws NoExtExc 
      */
     @GetMapping("/filter/extention")
-    public ArrayList metodoFilterExtention(@RequestParam(name="Estensione") String estensione) throws NoExtExc{
+    public ArrayList metodoFilterExtention(@RequestParam(name="Estensione") String estensione){
         return filter.FiltraPerEstensione(estensione);
     }
     
@@ -92,10 +87,9 @@ public class simpleRestController {
      * 
      * @param data Indica la data inserita dall'utente nella ricerca
      * @return Lista di Oggetti di DropboxFile filtrati per data di creazione
-     * @throws NoExtExc 
      */
     @GetMapping("/filter/date")
-    public ArrayList metodoFilterDate(@RequestParam(name="Data") String data) throws NoExtExc{
+    public ArrayList metodoFilterDate(@RequestParam(name="Data") String data){
         return filter.FiltraPerData(data);
     }
 
@@ -106,10 +100,9 @@ public class simpleRestController {
      * @param estensione Indica l'estensione inserita dall'utente nella ricerca
      * @param data Indica la data inserita dall'utente nella ricerca
      * @return Lista di Oggetti di DropboxFile filtrati per data di creazione ed estensione
-     * @throws NoExtExc 
      */
     @GetMapping("/filter/ext_and_date")
-    public ArrayList metodoFilterExtDate(@RequestParam(name="Estensione") String estensione, @RequestParam(name="Data") String data) throws NoExtExc{
+    public ArrayList metodoFilterExtDate(@RequestParam(name="Estensione") String estensione, @RequestParam(name="Data") String data){
         return filter.FiltraPerDataEstensione(estensione, data);
     }  
     
@@ -119,10 +112,20 @@ public class simpleRestController {
      * 
      * @return Una stringa contenente tutte le specifiche del Mese in cui è
      * stato inserito il maggior numero di file
-     * @throws NoFileExc 
      */
     @GetMapping("/stats/creation")
-    public String metodoStatsCreazione() throws NoFileExc{
+    public String metodoStatsCreazione(){
         return statsCreazione.StatisticaDataCreazione();
+    }
+    /**
+     * Rotta che permette di visualizzare informazioni sul mese in cui sono 
+     * stati modificati il maggior numero di file
+     * 
+     * @return Una stringa contenente tutte le specifiche del Mese in cui è
+     * stato modificato il maggior numero di file
+     */
+    @GetMapping("/stats/modified")
+    public String metodoStatsModifica(){
+        return statsCreazione.StatisticaDataModifica();
     }
 }
