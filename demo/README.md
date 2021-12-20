@@ -82,7 +82,7 @@ E' fondamentale, per il corretto funzionamento, che il formato dell'estensione e
     "content_hash": "ac950068f9e21f84db628d28208d4ba20ad5b482ac384b68343c9b34243053a2"
 }
 ```
- Il JSON sopra riportato indica la rappresentazione utilizzata per indicare un **dominio**. 
+ Il JSON sopra riportato indica la rappresentazione utilizzata per indicare un **File di Dropbox**. 
  I campi rappresentano:
  1) **tag** = Indica il tipo di elemento (File o Cartella).
  2) **name** = Nome del file.
@@ -97,7 +97,13 @@ E' fondamentale, per il corretto funzionamento, che il formato dell'estensione e
  11) **is_downloadable** = Indica se il file è scaricabile oppure no.
  12) **conten_hash** = Codice alfanumerico utile per verificare l'integrità di un file.
 
+### Risultato di chiamata su Postman di /filter/Extention
 
+![FilterExtention](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/filterExtention.PNG)
+
+Il programma restituisce i file di Dropbox sotto forma di un JSONArray.  
+
+Per i filtri **/filter/extention**, **/filter/date** e **/filter/ext_and_date** la chiamata su Postman produce risultati del modello riportato sopra, rispettando i parametri inseriti dall'utente.
  
 ## **Eccezioni** 
 Il programma è in grando di lanciare eccezioni sia standard che personalizzate
