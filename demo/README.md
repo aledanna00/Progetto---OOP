@@ -14,7 +14,7 @@ Avendo utilizzato il framework di [SpringBoot](https://spring.io/) è possibile 
 L'utente, per accedere a tutte le funzionalità dell'applicazione ha a disposizione due modi:
 * Usare un Client, come [Postman](https://www.postman.com/), che sfrutta il Web Service [Tomcat](http://tomcat.apache.org/), il quale è già integrato nel Framework di SpringBoot.
 * Utilizzare il progetto in PHP sviluppato come contenuto aggiuntivo per permettere a chiunque non sappia usare Postman di poter accedere a tutte le funzionalità.
-  Per poter utilizzare il PHP è necessario effettuare il download e l'istallazione di [XAMPP](https://www.apachefriends.org/it/index.html). Dopo aver fatto ciò si deve importare il progetto in un qualsiasi ambiente di sviluppo. 
+  Per poter utilizzare il PHP è necessario effettuare il download e l'istallazione di [XAMPP](https://www.apachefriends.org/it/index.html). Dopo aver fatto ciò si deve importare   il progetto in un qualsiasi ambiente di sviluppo. 
   Aprire il precedentemente installato XAMPP che si presenterà cosi:  
   
   ![HomePageXAMPP](https://github.com/aledanna00/Progetto---OOP/blob/main/DropboxPHP/ImgREADME/XAMPP%20control%20panel.PNG)  
@@ -37,14 +37,14 @@ The SpingBoot app has the goal of analyzing and monitoring files and folders inc
 The project is a Web Service that allows the interaction between a Client and Dropbox to achieve:
 
 ✅ Maximum, minimum and average size of the files based off of their extension (for example .docx)  
-✅ Time periods statistics
-
+✅ Time periods statistics  
 ✅ Extension and creation date filters
 
 Having used [SpringBoot](https://spring.io/) framework we can launch the program from a normal developer suite
 
-The User, in order to access all the features of the app has at its disposal two options:
+The User, in order to access all the features of the app, has at its disposal two options:
 *  To use a Client, like [Postman](https://www.postman.com/), that exploits the Web Service [Tomcat](http://tomcat.apache.org/), which is already incorporated in the Spring Boot Framework.
+*  
 
 ## **Rotte Applicazione**
 TIPO | ROTTA | DESCRIZIONE
