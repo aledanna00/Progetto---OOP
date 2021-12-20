@@ -53,6 +53,7 @@ GET | /stats/minimo | Restituisce la dimensione minima dei file, filtrati per ti
 GET | /stats/massimo | Restituisce la dimensione massima dei file, filtrati per tipo (esempio .docx)
 GET | /stats/media | Restituisce la dimensione minima dei file, filtrati per tipo (esempio .docx)
 GET | /stats/creation | Restituisce una stringa che indica il mese in cui è stato creato il maggior numero di file 
+GET | /stats/modified | Restituisce una stringa che indica il mese in cui è stato modificato il maggior numero di file 
 GET | /filter/extention | Restituisce una lista composta dai file, la cui estensione equivale a quella inserita dall'utente (esempio .docx)
 GET | /filter/date | Restituisce una lista composta dai file, la cui data equivale a quella inserita dall'utente (esempio 2021-12-08)
 GET | /filter/ext_and_date | Restituisce una lista composta dai file, la cui estensione e data equivale a quella inserita dall'utente (esempio .docx e 2021-12-08)
