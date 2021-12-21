@@ -8,6 +8,9 @@ import org.springframework.web.bind.annotation.RestController;
 import prova.demo.exception.NoExtExc;
 import prova.demo.exception.NoFileExc;
 import prova.demo.model.*;
+import prova.demo.service.Filters;
+import prova.demo.service.StatisticsMaxMinAvg;
+import prova.demo.service.StatisticsTimePeriod;
 
 /**
  * Classe Controller che gestisce le chiamate al server

@@ -9,4 +9,3 @@ public class NoFileExc extends Exception{
 		super("ERRORE: NESSUN FILE PRESENTE ");
 	}
 }
-

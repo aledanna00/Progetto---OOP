@@ -14,7 +14,10 @@ import net.minidev.json.JSONValue;
 import net.minidev.json.parser.ParseException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-
+/**
+ * @author Alessandra D'Anna
+ * @author Alessio Cruciani
+ */
 
 @SpringBootApplication
 public class DemoApplication {
