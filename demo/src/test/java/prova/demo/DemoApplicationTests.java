@@ -1,5 +1,8 @@
 package prova.demo;
 
+import org.junit.jupiter.api.BeforeEach;
+import prova.demo.*;
+
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
@@ -7,7 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 class DemoApplicationTests {
 
 	@Test
-	void contextLoads() {
-	}
+        void contextLoads(){
+            
+        }
 
 }
