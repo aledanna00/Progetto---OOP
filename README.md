@@ -61,6 +61,12 @@ The User, in order to access all the features of the app, has at its disposal tw
     
   Browsing through the buttons we can easily access all the features . Although the process may appear confusing , at this point the user is facilitated in the searching of files and statistics that satisfy his requests 
    
+## **Plus del Programma**
+➕ Filtri Multipli per data ed estensione  
+➕ Statistiche sulla dimensione dei file   
+➕ Progetto sviluppato in PHP per implementazione grafica  
+➕ Test in JUnit   
+➕ Diagramma riassuntivo in UML  
 
 ## **Rotte Applicazione**
 TIPO | ROTTA | DESCRIZIONE
