@@ -187,4 +187,4 @@ Andando a visionare i package più nel dettaglio troviamo
 Nome | LinkedIn | Contributo
 ---- | ---- | ----
 [Alessio Cruciani](https://github.com/AlessioCruciani) | [Link](https://www.linkedin.com/in/alessio-cruciani-54b028222/) | 50%
-[Alessandra D'Anna](https://github.com/aledanna00) | [Link]() | 50%
+[Alessandra D'Anna](https://github.com/aledanna00) | [Link](https://www.linkedin.com/in/alessandra-d-anna-1bab13228/) | 50%
