@@ -25,7 +25,7 @@ public class StatisticsMaxMinAvgTests {
 		}
 	 
 	 @Test
-	 @DisplayName("Test 1: Stampa del Massimo") 
+	 @DisplayName("Test 1: Stampa del Minimo") 
 	 void test1() throws NoFileExc{
 		  int expected = 11059;
 		  Assertions.assertEquals(expected, esempio.risultatoMinimo(".docx"));
@@ -37,7 +37,7 @@ public class StatisticsMaxMinAvgTests {
 		  Assertions.assertEquals(expected, esempio.risultatoMassimo(".docx"));
 		}
 	 @Test
-	 @DisplayName("Test 3: Stampa del Massimo") 
+	 @DisplayName("Test 3: Stampa della Media") 
 	 void test3() throws NoFileExc{
 		  int expected = 11062;
 		  Assertions.assertEquals(expected, esempio.risultatoMedia(".docx"));
