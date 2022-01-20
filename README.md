@@ -66,7 +66,7 @@ TIPO | ROTTA | DESCRIZIONE
 ---- | ---- | ----
 GET | /stats/minimo | Restituisce la dimensione minima dei file, filtrati per tipo (esempio .docx)
 GET | /stats/massimo | Restituisce la dimensione massima dei file, filtrati per tipo (esempio .docx)
-GET | /stats/media | Restituisce la dimensione minima dei file, filtrati per tipo (esempio .docx)
+GET | /stats/media | Restituisce la dimensione media dei file, filtrati per tipo (esempio .docx)
 GET | /stats/creation | Restituisce una stringa che indica il mese in cui è stato creato il maggior numero di file 
 GET | /stats/modified | Restituisce una stringa che indica il mese in cui è stato modificato il maggior numero di file 
 GET | /filter/extention | Restituisce una lista composta dai file, la cui estensione equivale a quella inserita dall'utente (esempio .docx)
