@@ -59,9 +59,9 @@ public class GetDataFromDropbox {
              * CI DICE CHE IL FILE DI OUTPUT è UN FILE DI TIPO JSON
              */
             openConnection.setRequestProperty("Content-Type", "application/json");
-            //NON LO SO 
+            
             openConnection.setRequestProperty("Accept", "application/json");
-            //NON LO SO 
+            
             openConnection.setDoOutput(true);
             /**
              * AGGIUNGE IL BODY COME STRINGA
