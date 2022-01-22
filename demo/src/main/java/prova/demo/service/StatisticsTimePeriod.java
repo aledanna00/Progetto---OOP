@@ -57,7 +57,7 @@ public class StatisticsTimePeriod {
             listaMesi.add(i.getClient_modified().substring(5, 7));
         }
         calcolaStatistiche();
-        return "Il mese in cui sono stati creati il numero maggiore di file è: " + Month.of(Integer.parseInt(mesePiuCreazione)) + " Nel quale sono stati creati " + this.contatoreMax + " file";
+        return "Il mese in cui sono stati modificati il numero maggiore di file è: " + Month.of(Integer.parseInt(mesePiuCreazione)) + " Nel quale sono stati modificati " + this.contatoreMax + " file";
     }
     /**
      * @param meseDaContare varaiabile che viene usata per indicare il mese di creazione dei file nel for  
